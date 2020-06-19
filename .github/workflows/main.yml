@@ -22,8 +22,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Compile with Grunt
+    - name: Compile with Gulp
       uses: elstudio/actions-js-build/build@v2
+      with:
+        args: compress
 
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v3
