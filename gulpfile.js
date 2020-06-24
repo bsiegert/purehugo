@@ -1,15 +1,22 @@
-var gulp = require('gulp')
-	uglify = require('gulp-uglify'),
-	concat = require('gulp-concat'),
-	minifyCSS = require('gulp-minify-css');
+const { src, dest, parallel } = require('gulp');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var minifyCSS = require('gulp-minify-css');
 
-gulp.task('compress', function() {
-  gulp.src(['assets/js/jquery.min.js', 'assets/js/jquery.prettysocial.min.js', 'assets/js/rainbow-custom.min.js', 'assets/js/scripts.js'])
+function compress_js(cb) {
+  src(['assets/js/jquery.min.js', 'assets/js/jquery.prettysocial.min.js', 'assets/js/rainbow-custom.min.js', 'assets/js/scripts.js'])
     .pipe(concat('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('static/js/'));
-  gulp.src(['assets/css/blog.css', 'assets/css/syntax-highlighter.css', 'assets/css/custom.css'])
+    .pipe(dest('static/js/'));
+  cb();
+}
+
+function compress_css(cb) {
+  src(['assets/css/blog.css', 'assets/css/syntax-highlighter.css', 'assets/css/custom.css'])
     .pipe(concat('all.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('static/css/'));
-});
+    .pipe(dest('static/css/'));
+  cb();
+}
+
+exports.default = parallel(compress_js, compress_css);
