@@ -12,7 +12,7 @@ function compress_js(cb) {
 }
 
 function compress_css(cb) {
-  src(['assets/css/blog.css', 'assets/css/syntax-highlighter.css', 'assets/css/custom.css'])
+  src(['assets/css/blog.css', 'assets/css/syntax-highlighter.css'/*, 'assets/css/custom.css' */])
     .pipe(concat('all.min.css'))
     .pipe(minifyCSS())
     .pipe(dest('static/css/'));
