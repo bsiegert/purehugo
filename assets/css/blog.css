@@ -12,7 +12,7 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: "Source Sans Pro", serif;
+    font-family: "Source Serif Pro", serif;
 }
 
 a {
@@ -55,7 +55,7 @@ h3 {
 }
 .brand-title {
     text-transform: uppercase;
-    font-family: "Oxygen", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 .brand-title a{
     color:#fff;
@@ -87,7 +87,7 @@ h3 {
     text-transform: uppercase;
      font-size: 85%; */
     font-weight: bold;
-    font-family: "Oxygen", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 .nav-item a:hover,
 .nav-item a:focus {
@@ -96,6 +96,7 @@ h3 {
 }
 
 .content-subhead {
+    font-family: "Source Sans Pro", serif;
     text-transform: uppercase;
     color: #aaa;
     border-bottom: 1px solid #eee;
@@ -116,7 +117,7 @@ h3 {
     font-size: 2em;
     color: #222;
     margin: 0.4em 0;
-    font-family: "Oxygen", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: bold;
 }
 .post-title:hover{
@@ -128,11 +129,13 @@ h3 {
     margin-left: 1em;
 }
 .post-description {
-    font-family: "Source Sans Pro", serif;
+    /* font-family: "Source Sans Pro", serif; */
+    text-align: justify;
     color: #333;
     line-height: 1.35em;
 }
 .post-meta {
+    font-family: "Source Sans Pro", serif;
     color: #999;
     font-size: 90%;
     margin: 5px 0;
@@ -213,7 +216,7 @@ h3 {
 }
 
 .post-share-links h4{
-    font-family: "Oxygen", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     margin:0 0 5px;
     color:#aaa
 }
