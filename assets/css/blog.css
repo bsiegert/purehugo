@@ -128,11 +128,15 @@ h3 {
     float: right;
     margin-left: 1em;
 }
-.post-description {
+.post-description p {
     /* font-family: "Source Sans Pro", serif; */
     text-align: justify;
     color: #333;
     line-height: 1.35em;
+}
+.post-description h1 {
+    text-align: left;
+    font-size: 1.7em;
 }
 .post-meta {
     font-family: "Source Sans Pro", serif;
