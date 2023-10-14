@@ -140,6 +140,9 @@ h3 {
   margin-left: 1em;
   background: #f8f8f8;
 }
+.post-description hr {
+    color: #ccc;
+}
 .post-description h1 {
     text-align: left;
     font-size: 1.7em;
