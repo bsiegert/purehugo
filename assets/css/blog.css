@@ -134,6 +134,12 @@ h3 {
     color: #333;
     line-height: 1.35em;
 }
+.post-description blockquote {
+  border-left: 2px solid #ccc;
+  padding: .1em .5em;
+  margin-left: 1em;
+  background: #f8f8f8;
+}
 .post-description h1 {
     text-align: left;
     font-size: 1.7em;
