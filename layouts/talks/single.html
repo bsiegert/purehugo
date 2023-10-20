@@ -4,6 +4,13 @@
     {{ partial "sidebar.html" . }}
 
     <div class="content pure-u-1 pure-u-md-3-4">
+        <h1 class="post-title">{{.Title}}</h1>
+        {{ if isset .Params "where"}}
+        <p class="post-meta">{{.Params.where }}</p>
+        {{ end }}
+        {{ if isset .Params "slides"}}
+        <p><a href="{{.Params.slides }}">&rarr; Slides</a></p>
+        {{ end }}
         {{ .Content }}
         {{ partial "footer.html" . }}
     </div>
