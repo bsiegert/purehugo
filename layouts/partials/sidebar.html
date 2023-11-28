@@ -7,6 +7,11 @@
 
         <nav class="nav">
             <ul class="nav-list">
+		{{ range $title, $url := .Site.Params.additionalLinks }}
+		<li class="nav-item">
+		  <a class="pure-button" href="{{ $url }}">{{ strings.Title $title  }}</a>
+		</li>
+		{{ end }}
                 {{ with .Site.Params.twitterName }}
                 <li class="nav-item">
                     <a class="pure-button" href="https://twitter.com/{{ . }}" rel="me"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
